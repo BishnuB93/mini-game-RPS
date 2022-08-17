@@ -1,0 +1,29 @@
+a = input (f'We are playing a rock, paper and scissors game. What is your guess:').lower()
+x = 'rock'
+y = 'scissors'
+z = 'paper'
+b = np.random.choice([x,y,z])
+
+def rps(a):
+    if a == x and b == y:
+        print(f'Oh no, I had {b} !! You won !!')
+    elif a==x and b ==z:
+        print(f'I had {b} !! I won !!')
+    elif a == y and b ==x:
+        print(f'I had {b} !! I won !!')
+    elif a ==y and b ==z:
+        print(f'Oh no, I had {b} !! You won !!')
+    elif a ==z and b ==x:
+        print(f'Oh no, I had {b} !! You won !!')
+    elif a ==z and b==y:
+        print(f'I had {b}!! I won !!')
+
+rps(a)
+        
+if a != x and a!= y and a!=z:
+    a = input('Oh ho, wrong guess - pls enter either rock, paper or scissors')
+
+while a == b:
+    a = input(f'Same choice, pls try again: ')
+    b = np.random.choice([x,y,z])
+    rps(a)
